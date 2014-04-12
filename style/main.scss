@@ -2,22 +2,22 @@
 @import "fonts/clear-sans.css";
 
 $field-width: 500px;
-$grid-spacing: 15px;
+$grid-spacing: 1px;
 $grid-row-cells: 4;
 $tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
-$tile-border-radius: 3px;
+$tile-border-radius: 0px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: #776E65;
-$bright-text-color: #f9f6f2;
+$text-color: rgb(68,108,179);
+$bright-text-color: #fff;
 
-$tile-color: #eee4da;
+$tile-color: darken(#bdc3c7,10%);
 $tile-gold-color: #edc22e;
 $tile-gold-glow-color: lighten($tile-gold-color, 15%);
 
 $game-container-margin-top: 40px;
-$game-container-background: #bbada0; // Board Border Color
+$game-container-background: lighten(#bdc3c7,20%); // Board Border Color
 
 $transition-speed: 100ms;
 
@@ -25,7 +25,7 @@ html, body {
   margin: 0;
   padding: 0;
 
-  background: #faf8ef; // Background of the body
+  background: rgb(246,248,248); // Background of the body
   color: $text-color;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
@@ -39,7 +39,7 @@ body {
 @mixin button {
   display: inline-block;
   background: darken($game-container-background, 20%);
-  border-radius: 3px;
+  border-radius: 0px;
   padding: 0 20px;
   text-decoration: none;
   color: $bright-text-color;
@@ -56,7 +56,7 @@ input {
   box-sizing: border-box;
   font-weight: bold;
   margin: 0;
-  @include appearance(none);
+  //@include appearance(none);
 
   &[type="text"], &[type="email"] {
     cursor: auto;
@@ -90,11 +90,12 @@ input {
 }
 
 h1.title {
-  font-size: 80px;
+  font-size: 50px;
   font-weight: bold;
   margin: 0;
   display: block;
   float: left;
+  padding-top: 22px
 }
 
 @include keyframes(move-up) {
@@ -116,7 +117,6 @@ h1.title {
 
 .score-container, .best-container {
   $height: 25px;
-
   position: relative;
   display: inline-block;
   background: $game-container-background;
@@ -125,8 +125,8 @@ h1.title {
   height: $height;
   line-height: $height + 22px;
   font-weight: bold;
-  border-radius: 3px;
-  color: white;
+  border-radius: 0px;
+  color: $tile-color;
   margin-top: 8px;
   text-align: center;
 
@@ -418,17 +418,17 @@ hr {
   $limit: 11;
 
   // Colors for all 11 states, false = no special color
-  $special-colors: false false, // 2
-                   false false, // 4
-                   #f78e48 true, // 8
-                   #fc5e2e true, // 16
-                   #ff3333 true, // 32
-                   #ff0000 true, // 64
-                   false true, // 128
-                   false true, // 256
-                   false true, // 512
-                   false true, // 1024
-                   false true; // 2048
+  $special-colors: #f1c40f true, // 2 Sun flower
+                  #f39c12 true, // 4 orange
+                   #e67e22 true, // 8 Carrot
+                   #d35400 true, // 16 Pumpkin
+                   #e74c3c true, // 32 Alizarin
+                   #c0392b true, // 64 Pomogrenate
+                   #95a5a6 true, // 128 Concrete
+                   #34495e true, // 256 Wet Asphalt
+                   #9b59b6 true, // 512 Amethyst
+                   #3498db true, // 1024 Peter River
+                   #1abc9c true; // 2048 Turquoise
 
   // Build tile colors
   @while $exponent <= $limit {
@@ -436,7 +436,7 @@ hr {
 
     &.tile-#{$power} .tile-inner {
       // Calculate base background color
-      $gold-percent: ($exponent - 1) / ($limit - 1) * 100;
+      $gold-percent: ($exponent - 1) / ($limit - 1) * 1;
       $mixed-background: mix($tile-gold-color, $tile-color, $gold-percent);
 
       $nth-color: nth($special-colors, $exponent);
@@ -445,7 +445,7 @@ hr {
       $bright-color: nth($nth-color, 2);
 
       @if $special-background {
-        $mixed-background: mix($special-background, $mixed-background, 55%);
+        $mixed-background: mix($special-background, $mixed-background, 100%);
       }
 
       @if $bright-color {
@@ -534,6 +534,7 @@ hr {
 }
 
 .above-game {
+  margin-top: 10px;
   @include clearfix;
 }
 
@@ -583,7 +584,7 @@ hr {
   }
 
   h1.title {
-    font-size: 27px;
+    font-size: 26px;
     margin-top: 15px;
   }
 
@@ -670,7 +671,7 @@ hr {
 // PP Donate button
 .pp-donate {
   button {
-    @include appearance(none);
+    //@include appearance(none);
     border: none;
     font: inherit;
     color: inherit;
@@ -733,7 +734,7 @@ hr {
       background-color: $game-container-background;
       padding: 10px 15px;
       width: 100%;
-      border-radius: 3px;
+      border-radius: 0px;
       line-height: 1;
       font-weight: normal;
       font-size: 15px;
