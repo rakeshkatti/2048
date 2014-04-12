@@ -9,7 +9,7 @@ $tile-border-radius: 0px;
 
 $mobile-threshold: $field-width + 20px;
 
-$text-color: rgb(68,108,179);
+$text-color: darken(#bdc3c7,10%);
 $bright-text-color: #fff;
 
 $tile-color: darken(#bdc3c7,10%);
@@ -95,7 +95,7 @@ h1.title {
   margin: 0;
   display: block;
   float: left;
-  padding-top: 22px
+  padding-top: 10px
 }
 
 @include keyframes(move-up) {
@@ -736,11 +736,10 @@ hr {
       width: 100%;
       border-radius: 0px;
       line-height: 1;
-      font-weight: normal;
+      font-weight: light;
       font-size: 15px;
-      font-family: Consolas, "Liberation Mono", Courier, monospace;
+      font-family: "Helvetica Neue","Lato", Arial, sans-serif;;
       text-align: center;
-
     }
   }
 

@@ -3,7 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   background: #f6f8f8;
-  color: #446cb3;
+  color: #a1aab0;
   font-family: "Helvetica Neue","Lato", Arial, sans-serif;
   font-size: 18px;
 }
@@ -33,17 +33,17 @@ input[type="text"], input[type="email"] {
   cursor: auto;
   background: #bac0c5;
   font-weight: normal;
-  color: #446cb3;
+  color: #a1aab0;
   padding: 0 15px;
 }
 input[type="text"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder {
-  color: #7896cc;
+  color: #cbd0d3;
 }
 input[type="text"]::-moz-placeholder, input[type="email"]::-moz-placeholder {
-  color: #7896cc;
+  color: #cbd0d3;
 }
 input[type="text"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder {
-  color: #7896cc;
+  color: #cbd0d3;
 }
 
 .heading:after {
@@ -58,7 +58,7 @@ h1.title {
   margin: 0;
   display: block;
   float: left;
-  padding-top: 22px;
+  padding-top: 10px;
 }
 
 @-webkit-keyframes move-up {
@@ -134,7 +134,7 @@ h1.title {
   font-size: 25px;
   line-height: 25px;
   font-weight: bold;
-  color: rgba(68, 108, 179, 0.9);
+  color: rgba(161, 170, 176, 0.9);
   z-index: 100;
   -webkit-animation: move-up 600ms ease-in;
   -moz-animation: move-up 600ms ease-in;
@@ -159,7 +159,7 @@ p {
 }
 
 a {
-  color: #446cb3;
+  color: #a1aab0;
   font-weight: bold;
   text-decoration: underline;
   cursor: pointer;
@@ -171,7 +171,7 @@ strong.important {
 
 hr {
   border: none;
-  border-bottom: 1px solid #d4deef;
+  border-bottom: 1px solid white;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -1124,9 +1124,9 @@ hr {
   width: 100%;
   border-radius: 0px;
   line-height: 1;
-  font-weight: normal;
+  font-weight: light;
   font-size: 15px;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: "Helvetica Neue","Lato", Arial, sans-serif;
   text-align: center;
 }
 .btc-donate:hover .address, .btc-donate .address:hover .address {
