@@ -1,4 +1,4 @@
-# 2048 Reverse edition with Flat colors
+# 2048 Reverse version with Flat colors
 This is just a reversed version of the <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli's</a> <a href="http://git.io/2048">2048</a>
 
 [You can try out the game here](http://rakeshkatti.github.io/2048/)
